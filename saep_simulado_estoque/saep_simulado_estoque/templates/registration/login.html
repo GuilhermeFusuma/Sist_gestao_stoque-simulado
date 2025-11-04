@@ -3,6 +3,9 @@
 {% block content %}
 <h2>Login</h2>
 <form method="post">
+    {% if form.errors %}
+        <p style="color: red;">Nome ou senha inválidos. tente novamente.</p>
+    {% endif %}
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Login</button>
