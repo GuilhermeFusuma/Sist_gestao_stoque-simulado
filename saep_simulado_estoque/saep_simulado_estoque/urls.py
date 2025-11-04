@@ -23,4 +23,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("django.contrib.auth.urls")),
     path("", views.login, name="index"), 
+    path("pagina_inicial", views.pag_inicial, name="pagina-inicial"),
 ]  

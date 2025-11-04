@@ -71,8 +71,8 @@ TEMPLATES = [
 STATIC_URL = '/static/'
 
 #TODO: adicionar rota de login
-LOGIN_REDIRECT_URL = '/tela_inicial'
-LOGOUT_REDIRECT_URL = ''
+LOGIN_REDIRECT_URL = '/pagina_inicial'
+LOGOUT_REDIRECT_URL = '/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "saep_simulado_estoque" / "static",

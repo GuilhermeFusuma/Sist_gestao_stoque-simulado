@@ -1,0 +1,10 @@
+{% load static %}
+<nav class="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Saep</a>
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn">Logout</button>
+        </form>
+    </div>
+</nav>
