@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "estoque",
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = "saep_simulado_estoque.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "saep_simulado_estoque/templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -64,6 +65,16 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+# static
+STATIC_URL = '/static/'
+
+#TODO: adicionar rota de login
+LOGIN_REDIRECT_URL = '/tela_inicial'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "tooth_n_care" / "static",
 ]
 
 WSGI_APPLICATION = "saep_simulado_estoque.wsgi.application"
