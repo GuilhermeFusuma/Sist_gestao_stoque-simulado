@@ -24,4 +24,5 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path("", views.login, name="index"), 
     path("pagina_inicial", views.pag_inicial, name="pagina-inicial"),
+    path("gestao_estoque", views.gestao_estoque, name="gestao-estoque"),
 ]  

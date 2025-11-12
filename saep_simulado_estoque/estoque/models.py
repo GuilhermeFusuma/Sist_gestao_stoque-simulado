@@ -4,7 +4,7 @@ class Movimentacoes(models.Model):
     unique_id = models.AutoField(primary_key=True)
     equipamento = models.ForeignKey('Equipamentos', on_delete=models.CASCADE)
     quantidade = models.IntegerField(null=False, blank=False)
-    data = models.DateField(null=False, blank=False)
+    data = models.DateField(null=False, blank=False, auto_now_add=True)
     fornecedor = models.CharField(max_length=100, null=False, blank=False)
     lote = models.CharField(max_length=50, null=False, blank=False)
     tipo_operacao = models.CharField(

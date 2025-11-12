@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>Gestão de Produtos</h2>
+<div class="container p-5">
+    <table class="table">
+    <thead>
+        <th>Nome do Produto</th>
+        <th>Quantidade</th>
+        <th>Tipo</th>
+        <th>Tensão</th>
+        <th>Resolução</th>
+        <th>Armazenamento</th>
+        <th>Conectividade</th>
+    </thead>
+    <tbody>
+        {% for produto in produtos %}
+        <tr>
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.saldo_atual }}</td>
+            <td>{{ produto.tipo }}</td>
+            <td>{{ produto.tensao }}</td>
+            <td>{{ produto.resolucao }}</td>
+            <td>{{ produto.armazenamento }}</td>
+            <td>
+                {% if produto.conectividade %}
+                    Sim
+                {% else %}
+                    não
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</div>
+</table>
+{% endblock %}
